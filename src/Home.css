@@ -1,0 +1,256 @@
+.home-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(15, 23, 42, 255);
+  color: white;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.home-header {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.home-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, #ff8a00, #da1b60);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeIn 1s ease-out;
+}
+
+.home-subtitle {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0.9;
+  animation: fadeIn 1.2s ease-out;
+}
+
+.cards-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem 2rem 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  animation: slideUp 1s ease-out;
+}
+
+@media (min-width: 768px) {
+  .cards-container {
+    flex-direction: row;
+    align-items: stretch;
+  }
+}
+
+.media-card {
+  flex: 1;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-decoration: none;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.media-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.media-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  transition: all 0.5s ease;
+}
+
+.media-card:hover::before {
+  transform: scale(1.1);
+}
+
+.books-card {
+  background-image: url("https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80");
+}
+
+.anime-card {
+  background-image: url("https://images.unsplash.com/photo-1613376023733-0a73315d9b06?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80");
+}
+
+.tv-card {
+  background-image: url("https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80");
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.2) 50%,
+      rgba(0, 0, 0, 0) 100%);
+  z-index: 1;
+}
+
+.card-content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.media-card:hover .card-content {
+  transform: translateY(-10px);
+}
+
+.card-icon {
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.books-card .card-icon {
+  color: #f8c156;
+}
+
+.anime-card .card-icon {
+  color: #56a2f8;
+}
+
+.tv-card .card-icon {
+  color: #f85656;
+}
+
+.card-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.books-card .card-title {
+  color: #f8c156;
+}
+
+.anime-card .card-title {
+  color: #56a2f8;
+}
+
+.tv-card .card-title {
+  color: #f85656;
+}
+
+.card-description {
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.card-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.books-card .card-button {
+  background-color: rgba(248, 193, 86, 0.2);
+  border: 2px solid #f8c156;
+  color: #f8c156;
+}
+
+.books-card:hover .card-button {
+  background-color: #f8c156;
+  color: #222;
+}
+
+.anime-card .card-button {
+  background-color: rgba(86, 162, 248, 0.2);
+  border: 2px solid #56a2f8;
+  color: #56a2f8;
+}
+
+.anime-card:hover .card-button {
+  background-color: #56a2f8;
+  color: #222;
+}
+
+.tv-card .card-button {
+  background-color: rgba(248, 86, 86, 0.2);
+  border: 2px solid #f85656;
+  color: #f85656;
+}
+
+.tv-card:hover .card-button {
+  background-color: #f85656;
+  color: #222;
+}
+
+.home-footer {
+  padding: 2rem;
+  text-align: center;
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .home-title {
+    font-size: 2.5rem;
+  }
+
+  .media-card {
+    height: 300px;
+    margin-bottom: 1.5rem;
+  }
+
+  .card-content {
+    padding: 1.5rem;
+  }
+}

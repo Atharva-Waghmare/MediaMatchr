@@ -18,7 +18,7 @@ MediaMatchr is a cross-domain entertainment recommendation system that delivers 
 ## Installation
 - Clone the repository:
 ```bash
-git clone https://github.com/Atharva-Waghmare/DSA_project  
+git clone https://github.com/Atharva-Waghmare/MediaMatchr.git
 ```
 - Install dependencies:
 ```bash

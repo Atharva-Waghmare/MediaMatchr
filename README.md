@@ -13,9 +13,8 @@ MediaMatchr is a cross-domain entertainment recommendation system that delivers 
 
 ## Tech Stack
 - Backend: Python, Flask, pandas, numpy, scikit-learn, Surprise
-- Frontend: HTML, CSS, JavaScript (assumed, based on typical web development)
+- Frontend: HTML, CSS, JavaScript 
 - Design: Figma for UI/UX prototyping
-- IDE: Visual Studio Code
 ## Installation
 - Clone the repository:
 ```bash
